@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100%;
+}
+
+body {
+    background-color: #ED1A09;
+}
+
+h1 {
+    font-family: "Monoton";
+    font-size: 3rem;
+    text-align: center;
+    color: #FFDB43;
+    text-shadow: 5px 5px 15px #FFDB43;
+    margin-bottom: 5%;
+}
+
+.container {
+    height: 600px;
+    width: 600px;
+    background-color: #d3d3d3;
+    margin-left: 38%;
+    margin-bottom: 10%;
+}
+
+.circleContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25%;
+}
+
+.leftCircle,
+.rightCircle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(238, 235, 235);
+}
+.leftContainer,
+.rightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrowLeftContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.arrowRightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.leftArrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #cbad26;
+}
+
+.rightArrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #cbad26;
+}
+
+.upArrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #cbad26;
+}
+
+.downArrow {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #cbad26;
+}
