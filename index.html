@@ -7,30 +7,34 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
     </head>
     <body>
-        <h1>Etch A Sketch</h1>
-        <div class="buttonOption">
-            <button class="reset">Reset</button>
-            <button class="black">Black</button>
-            <button class="RGB">RGB</button>
-            <div class="sliderContainer">
-                <input type="range" min="2" max="100" value="8" class="slider">
-            </div>
-        </div>
-        <div class="container"></div>
-        <div class="circleContainer">
-            <div class="leftContainer">
-                <div class="arrowLeftContainer">
-                    <div class="leftArrow"></div>
-                    <div class="rightArrow"></div>
+        <div class="wrapper">
+            <h1>Etch A Sketch</h1>
+            <div class="buttonOption">
+                <button class="reset">Reset</button>
+                <button class="black">Black</button>
+                <button class="RGB">RGB</button>
+                <div class="sliderContainer">
+                    <input type="range" min="2" max="100" value="8" class="slider">
                 </div>
-                <div class="leftCircle"></div>
             </div>
-            <div class="rightContainer">
-                <div class="arrowRightContainer">
-                    <div class="upArrow"></div>
-                    <div class="downArrow"></div>
+            <div class="container">
+                <div class="containerGrid"></div>
+            </div>
+            <div class="circleContainer">
+                <div class="leftContainer">
+                    <div class="arrowLeftContainer">
+                        <div class="leftArrow"></div>
+                        <div class="rightArrow"></div>
+                    </div>
+                    <div class="leftCircle"></div>
                 </div>
-                <div class="rightCircle"></div>
+                <div class="rightContainer">
+                    <div class="arrowRightContainer">
+                        <div class="upArrow"></div>
+                        <div class="downArrow"></div>
+                    </div>
+                    <div class="rightCircle"></div>
+                </div>
             </div>
         </div>
         <script src="script.js" defer></script>
