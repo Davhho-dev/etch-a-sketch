@@ -5,12 +5,17 @@ buttons.forEach((button) => {
     button.addEventListener("click", () => {
         let className = button.classList[0];
         console.log(button);
-        if(className === "black") {
-            console.log("yes");
-            grid.style.backgroundColor = "black";
-        }else if(className = "reset") {
-            grid.style.backgroundColor = "#d3d3d3";
-        }
+        grid.style.backgroundColor = setColor(className);
     });
 });
+
+function setColor(className) {
+    if(className === "reset") return "#d3d3d3";
+    else if(className === "black") return "black";
+    else {
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        randomColor = "#" + randomColor;
+        return randomColor;
+    }
+}
 
