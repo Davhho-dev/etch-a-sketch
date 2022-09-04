@@ -18,7 +18,37 @@ h1 {
     text-align: center;
     color: #FFDB43;
     text-shadow: 5px 5px 15px #FFDB43;
-    margin-bottom: 5%;
+}
+
+.buttonOption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap: 25px;
+}
+
+button {
+    height: 50px;
+    width: 100px;
+    font-family: "Monoton";
+    font-size: 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    border-radius: 50px;
+    background: rgb(238, 235, 235);
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background:#cbad26;
 }
 
 .container {
