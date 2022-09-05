@@ -9,9 +9,7 @@ function createGrid(rows, columns) {
         for(let j = 0; j < columns; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
-            cell.style.border = "1px solid black";
-            cell.style.height = "37.5px";
-            cell.style.width = "37.5px";
+            cell.setAttribute("style", "border: 1px solid black; height: 37.5px; width: 37.5px;");
             grid.append(cell);
         } 
     }
