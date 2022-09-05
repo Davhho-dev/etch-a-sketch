@@ -1,8 +1,9 @@
 const buttons = document.querySelectorAll("button");
 const grid = document.querySelector(".containerGrid");
-const slider = document.querySelector(".slider");
-const sliderVal = document.querySelector(".sliderValue");
-sliderVal.textContent = slider.value;
+//const slider = document.querySelector(".slider");
+//const sliderVal = document.querySelector(".sliderValue");
+
+
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -11,6 +12,8 @@ buttons.forEach((button) => {
         grid.style.backgroundColor = setColor(className);
     });
 });
+
+
 
 function setColor(className) {
     if(className === "reset") return "#d3d3d3";
@@ -22,7 +25,8 @@ function setColor(className) {
     }
 }
 
+/*
 function getSliderVal(val) {
     sliderVal.textContent = val;
-    console.log(slider.value);
-}
+    return slider.val;
+}*/
