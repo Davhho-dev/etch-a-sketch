@@ -2,32 +2,53 @@ const buttons = document.querySelectorAll("button");
 const grid = document.querySelector(".containerGrid");
 //const slider = document.querySelector(".slider");
 //const sliderVal = document.querySelector(".sliderValue");
-createGrid(16, 16);
 
+createGrid(16, 16);
 function createGrid(rows, columns) {
     for(let i = 0; i < rows; i++) {
         for(let j = 0; j < columns; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
-            cell.setAttribute("style", "border: 1px solid black; height: 37.5px; width: 37.5px;");
+            cell.setAttribute("style", "border: 1px solid black; height: 37.5px; width: 37.5px; background-color: #d3d3d3;");
             grid.append(cell);
         } 
     }
 }
 
-grid.addEventListener("mouseover", function(e) {
-   e.target.style.backgroundColor = "black";
-});
-
+/*grid.addEventListener("mouseover", function(e) {
+    e.target.style.backgroundColor = "black";
+    let colors = btn();
+    console.log(btn());
+})*/
 
 buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        let colors = setColor(button.classList[0]);
+        if(colors === "#d3d3d3") {
+           while(grid.firstChild) {
+                grid.removeChild(grid.firstChild);
+           }
+           createGrid(16,16);
+        }
+        grid.addEventListener("mouseover", function(e) {
+            e.target.style.backgroundColor = colors;
+        })
+    });
+});
+
+/*grid.addEventListener("mouseover", function(e) {
+   e.target.style.backgroundColor = "black";
+});
+*/
+
+/*buttons.forEach((button) => {
     button.addEventListener("click", () => {
         let className = button.classList[0];
         console.log(button);
         grid.style.backgroundColor = setColor(className);
     });
 });
-
+*/
 
 
 function setColor(className) {
