@@ -15,6 +15,10 @@ function createGrid(rows, columns) {
     }
 }
 
+grid.addEventListener("mouseover", function(e) {
+   e.target.style.backgroundColor = "black";
+});
+
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
