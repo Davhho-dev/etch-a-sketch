@@ -82,10 +82,8 @@ button {
     height: 600px;
     width: 600px;
     background-color: #d3d3d3;
-}
-
-.pixel {
-    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .circleContainer {

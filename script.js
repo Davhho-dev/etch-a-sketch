@@ -2,7 +2,20 @@ const buttons = document.querySelectorAll("button");
 const grid = document.querySelector(".containerGrid");
 //const slider = document.querySelector(".slider");
 //const sliderVal = document.querySelector(".sliderValue");
+createGrid(16, 16);
 
+function createGrid(rows, columns) {
+    for(let i = 0; i < rows; i++) {
+        for(let j = 0; j < columns; j++) {
+            const cell = document.createElement("div");
+            cell.classList.add("cell");
+            cell.style.border = "1px solid black";
+            cell.style.height = "37.5px";
+            cell.style.width = "37.5px";
+            grid.append(cell);
+        } 
+    }
+}
 
 
 buttons.forEach((button) => {
