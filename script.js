@@ -1,5 +1,8 @@
 const buttons = document.querySelectorAll("button");
 const grid = document.querySelector(".containerGrid");
+const slider = document.querySelector(".slider");
+const sliderVal = document.querySelector(".sliderValue");
+sliderVal.textContent = slider.value;
 
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -19,3 +22,7 @@ function setColor(className) {
     }
 }
 
+function getSliderVal(val) {
+    sliderVal.textContent = val;
+    console.log(slider.value);
+}
