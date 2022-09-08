@@ -48,7 +48,7 @@ button {
     font-size: 20px;
 }
 
-/*.slider {
+.slider {
     -webkit-appearance: none;
     border-radius: 50px;
     background: rgb(238, 235, 235);
@@ -70,7 +70,7 @@ button {
     font-family: "Monoton";
     color: white;
 }
-*/
+
 .container {
     display: flex;
     justify-content: center;

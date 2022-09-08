@@ -1,26 +1,25 @@
 const buttons = document.querySelectorAll("button");
 const grid = document.querySelector(".containerGrid");
-//const slider = document.querySelector(".slider");
-//const sliderVal = document.querySelector(".sliderValue");
+const slider = document.querySelector(".slider");
+const sliderVal = document.querySelector(".sliderValue");
 
-createGrid(16, 16);
+createGrid(slider.value, slider.value); //create the first grid when app starts
+
+
+
 function createGrid(rows, columns) {
+    let cellDimension = 600/rows; //width & height of cell based on # of cells
     for(let i = 0; i < rows; i++) {
         for(let j = 0; j < columns; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
-            cell.setAttribute("style", "border: 1px solid black; height: 37.5px; width: 37.5px; background-color: #d3d3d3;");
+            cell.setAttribute("style", `border: 1px solid black; height: ${cellDimension}px; width: ${cellDimension}px; background-color: #d3d3d3;`);
             grid.append(cell);
         } 
     }
 }
 
-/*grid.addEventListener("mouseover", function(e) {
-    e.target.style.backgroundColor = "black";
-    let colors = btn();
-    console.log(btn());
-})*/
-
+//button events - hover action - resets grid if button is selected - sets the color
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         let colors = setColor(button.classList[0]);
@@ -28,28 +27,13 @@ buttons.forEach((button) => {
            while(grid.firstChild) {
                 grid.removeChild(grid.firstChild);
            }
-           createGrid(16,16);
+           createGrid(slider.value, slider.value);
         }
         grid.addEventListener("mouseover", function(e) {
             e.target.style.backgroundColor = colors;
         })
     });
 });
-
-/*grid.addEventListener("mouseover", function(e) {
-   e.target.style.backgroundColor = "black";
-});
-*/
-
-/*buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-        let className = button.classList[0];
-        console.log(button);
-        grid.style.backgroundColor = setColor(className);
-    });
-});
-*/
-
 
 function setColor(className) {
     if(className === "reset") return "#d3d3d3";
@@ -61,8 +45,11 @@ function setColor(className) {
     }
 }
 
-/*
-function getSliderVal(val) {
-    sliderVal.textContent = val;
-    return slider.val;
-}*/
+//slider action - remove current grid and update grid based on value of slider
+slider.addEventListener("input", () => {
+    sliderVal.textContent = slider.value;
+    while(grid.firstChild) {
+        grid.removeChild(grid.firstChild);
+    }
+    createGrid(slider.value, slider.value);
+});
